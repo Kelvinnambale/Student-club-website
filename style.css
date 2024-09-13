@@ -15,7 +15,7 @@
 
 :root{
   --bg-color: #fffff0;
-  --text-color: #ffffff;
+  --text-color: #000000;
   --second-text-color: #000000;
   --hover-color: #0cf7ff;
   --main-color: #082e86;
@@ -72,3 +72,10 @@ section{
   color: var(--text-color);
   display: none;
 } 
+.navbar1{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: rgb(24, 226, 24);
+}
