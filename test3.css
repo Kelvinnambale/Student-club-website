@@ -16,7 +16,7 @@
 :root{
     --text-color: #000000;
     --second-text-color: #ffffff;
-    --third-color: #0ec226;
+    --third-color: #18b60a;
     --hover-color: #fcf826;
     --main-color: #082e86;
 }
@@ -64,7 +64,14 @@ body {
     background-color: #ff9800;
     color: white;
     padding: 10px 20px;
-    border-radius: 35%;
     cursor: pointer;
     font-size: 1.2rem;
+}
+.home-content{
+    background-image: url('images/bkcgrnd.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 5%;
+    position: relative;
 }
