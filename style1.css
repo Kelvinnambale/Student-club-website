@@ -31,24 +31,110 @@ section{
   min-height: 90vh;
   padding: 7rem 9% 2rem;
 }  
-.nav{
-    background: #36c72b;
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
-    justify-content: space-between;
-    display: flex;
-    padding: 0 4rem 2rem;
+
+body {
+  background-color: #f4f4f4;
 }
 
-.header{
-  width: 100%;
-  
+/* Header styles */
+header {
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.logo{
-  color: var(--hover-color);
-  font-weight: 700;
+/* Top navigation styles */
+.topnav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact i {
+  margin-right: 15px;
+  font-size: 0.9em;
+}
+
+.signin a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.socialmedia-icons i {
+  margin-left: 10px;
+  font-size: 1.2em;
   cursor: pointer;
+}
+
+/* Main navigation styles */
+.nav_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+}
+
+.logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+#menu-icon {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #007bff;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .topnav {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .contact, .signin, .socialmedia-icons {
+      margin-bottom: 10px;
+  }
+
+  #menu-icon {
+      display: block;
+  }
+
+  .navbar {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      background-color: #fff;
+      top: 100%;
+      left: 0;
+      padding: 20px 0;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .navbar.active {
+      display: flex;
+  }
+
+  .navbar a {
+      padding: 10px 5%;
+  }
 }
