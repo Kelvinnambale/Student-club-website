@@ -143,7 +143,7 @@ body {
     animation: slideIn 1s ease-out 0.5s both, float 3s ease-in-out 1s infinite;
     margin-bottom: 50px;
 }
-.read-more-btn{
+.content .read-more-btn{
     display: inline-block;
         padding: 10px 20px;
         background-color: #007bff;
@@ -154,4 +154,22 @@ body {
         transition: background-color 0.3s ease;
         animation: slideIn 1s ease-out 1s both;
         animation: slideIn 1s ease-out 0.5s both, float 3s ease-in-out 1s infinite;
+}
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.about .read-more-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+    animation: slideIn 1s ease-out 1s both;
+    animation: slideIn 1s ease-out 0.5s both, float 3s ease-in-out 1s infinite;
 }
