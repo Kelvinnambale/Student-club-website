@@ -3,45 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nxgen || Learning Platform</title>
-    <link rel="stylesheet" href="style1.css">
+    <title>Nxgen || Club Website</title>
+    <link rel="stylesheet" href="style.css">
     <!--Boxicons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <!-- Header Section-->
-    <header> 
-        <div class="topnav">
-            <div class="contact">
-                <i class='bx bx-phone-call'> +254 72000000</i> 
-                <i class='bx bx-envelope'> nxgen2024@gmail.com</i> 
-            </div>
-
-            <div class="signin">
-                <a href="">Register | Login</a>
-            </div>
-
-            <div class="socialmedia-icons">
-                <i class='bx bxl-github' ></i>
-                <i class='bx bxl-linkedin' ></i>
-                <i class='bx bxl-discord-alt' ></i>
-                <i class='bx bx-search-alt-2' ></i>
-            </div> --
+    <div class="top-bar">
+        <div class="contact-info">
+            <span><i class='bx bx-phone-call'> +254 72000000</i></span>
+            <span><i class='bx bx-envelope'> nxgen2024@gmail.com</i></span>
         </div>
-        <div class="nav_bar">
-            <a href="#" class="logo"><img src="images/logo.png" alt="Nxgen Logo" width="150" height="110"></a>
-    
-            <i class="bx bx-menu" id="menu-icon"></i>
-       
-            <nav class="navbar">
-                <a href="#home">Home</a>
-                <a href="#about">About Us</a>
-                <a href="#blog">Blogs/News</a>
-                <a href="#events">Events</a>
-                <a href="#resources">Resources</a>
-                <a href="#contact">Contact Us</a>
-            </nav>
+        <!-- review later
+        <div>
+            <a href="#">REGISTER</a>
         </div>
+        -->
+        <div class="social-icons">
+            <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#" aria-label="Github"><i class='bx bxl-github' ></i></a>
+            <a href="#" aria-label="Discord"><i class='bx bxl-discord-alt' ></i></a>
+            <a href="#" aria-label="Search"><i class='bx bxl-github' ></i></a>
+        </div>
+    </div>
+
+    <!--Header section-->
+
+    <header class="main-header">
+        <!-- logo -->
+        <div class="logo"><span><img src="images/logo.png" alt="" width="150px" height="100px"></span></div>
+
+        <nav class="nav-links">
+            <a href="#home"><i class='bx bx-home-alt'></i> Home</a>
+            <a href="#about">About Us</a>
+            <a href="#resources">Resources</a>
+            <a href="#events">Events</a>            
+            <a href="#blog">Blogs/News</a>
+            <a href="#contact"><i class='bx bxs-contact'></i> Contact Us</a>
+        </nav>
+            <button class="admission-btn"><a href="https://forms.gle/LfodguEYr7PKojW69" target="_blank">Join Us</a></button>
     </header>
+
+    <!-- Home section-->
+    <section class="home">
+        <div class="background-slideshow">
+
+        <!-- Background images-->
+            <img src="images/bckgrnd1.jpg" alt="Background 1" class="active">
+            <img src="images/backgrnd2.jpg" alt="Background 2">
+            <img src="images/backgrnd3.jpg" alt="Background 3">
+            <img src="images/backgrnd4.jpg" alt="Background 3">
+            <img src="images/backgrnd5.jpg" alt="Background 3">
+           
+        </div>
+        <div class="foreground-overlay"></div>
+        <div class="content">
+            <h1>Welcome to Nextgen Club Website</h1>
+            <p>Join us in exploring world of technology. 
+                Whether you're interested in networking, web design, 
+                or emerging tech trends, there's a place for you here!
+            </p>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+    </section>
+    <section class="about">
+        <div class="about-img">
+            <img src="images/about.png" alt="About Us" width="100px" height="100px">
+        </div>
+        <div class="about-content">
+            <h2></h2>
+        </div>
+    </section>
+    <script>
+        // JavaScript for changing images
+        const images = document.querySelectorAll('.background-slideshow img');
+        let currentImage = 0;
+
+        function changeImage() {
+            images[currentImage].classList.remove('active');
+            currentImage = (currentImage + 1) % images.length;
+            images[currentImage].classList.add('active');
+        }
+
+        // Change image every 5 seconds
+        setInterval(changeImage, 3000);
+    </script>
 </body>
 </html>
