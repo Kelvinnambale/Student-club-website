@@ -201,7 +201,7 @@ body {
 }
 .about-section {
     background-color: #f8f9fa;
-    background-image: url('images/backgrnd3.jpg');
+    background-image: url('images/backgrnd2.jpg');
     background-attachment: fixed;
     position: relative;
     overflow: hidden;
@@ -223,7 +223,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 10px;
     position: relative;
     z-index: 2;
 }
@@ -305,6 +305,7 @@ body {
     margin-bottom: 20px;
     line-height: 1.6;
     color: #666;
+    font-weight: 300;
 }
 
 .goals-list {
