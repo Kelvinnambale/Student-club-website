@@ -379,7 +379,8 @@ body {
     margin-bottom: 20px;
     line-height: 1.6;
     color: var(--text-color);
-    font-weight: 300;
+    font-weight: 400;
+    font-size: 1.0em;
 }
 
 .goals-list {
