@@ -47,16 +47,23 @@
     <!-- Home section-->
     <section class="home">
         <div class="background-slideshow">
-
-        <!-- Background images-->
+            <!-- Background images-->
             <img src="images/bckgrnd1.jpg" alt="Background 1" class="active">
             <img src="images/backgrnd2.jpg" alt="Background 2">
             <img src="images/backgrnd3.jpg" alt="Background 3">
-            <img src="images/backgrnd4.jpg" alt="Background 3">
-            <img src="images/backgrnd5.jpg" alt="Background 3">
+            <img src="images/backgrnd4.jpg" alt="Background 4">
+            <img src="images/backgrnd5.jpg" alt="Background 5">
         </div>
         <div class="foreground-overlay"></div>
-         <!-- New content sections -->
+        <div class="content">
+            <p>Join us in exploring world of technology. 
+                Whether you're interested in networking, web design, 
+                or emerging tech trends, there's a place for you here!
+            </p>
+            <a href="#" class="read-more-btn">Read More</a>
+        </div>
+        
+        <!-- New content sections -->
         <div class="content-sections">
             <div class="section" id="motto">
                 <h2>Our Motto</h2>
@@ -75,7 +82,7 @@
                 <p>To create a platform where members can develop practical skills, network with professionals, and launch successful careers in technology.</p>
             </div>
         </div>
-    </section>
+    </section>    
 
     <!--About Section-->
     <section class="about-section" id="about">
@@ -110,7 +117,7 @@
         
     </section>
     <script>
-        // JavaScript for changing images
+        // Background slideshow
         const images = document.querySelectorAll('.background-slideshow img');
         let currentImage = 0;
 
@@ -121,7 +128,29 @@
         }
 
         // Change image every 5 seconds
-        setInterval(changeImage, 3000);
+        setInterval(changeImage, 5000);
+
+        // Content sections pop-in effect
+        function showSections() {
+            const sections = document.querySelectorAll('.section');
+            let index = 0;
+
+            function showNextSection() {
+                if (index < sections.length) {
+                    sections[index].classList.add('visible');
+                    index++;
+                    setTimeout(showNextSection, 1000); // 1 second delay between each section
+                }
+            }
+
+            showNextSection();
+        }
+
+        // Call both functions when the page loads
+        window.addEventListener('load', () => {
+            changeImage();
+            showSections();
+        });
     </script>
 </body>
 </html>
