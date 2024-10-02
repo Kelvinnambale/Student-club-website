@@ -45,7 +45,7 @@ body {
 }
 .top-bar{
     background-color: var(--backgrnd-color);
-    color: var(--hover-color);
+    color: var(--second-text-color);
     padding: 10px 5%;
     display: flex;
     justify-content: space-between;
@@ -74,6 +74,8 @@ body {
       z-index: 1;
       overflow: hidden;
       padding: 0 1rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      animation: slideIn 1s ease-out 1s both;
 }
 .social-media a i{
     font-size: 1.0rem;
@@ -118,14 +120,16 @@ body {
     font-size: 1.2rem;
 }
 .admission-btn {
-    background-color: var(--hover-color);
+    display: inline-block;
     padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    border-radius: 50px;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .admission-btn a{
-    color: var(--text-color);
+    color: #ffffff;
+    font-size: 1.0rem;
     font-weight: bold;
 }
 * {
@@ -183,7 +187,7 @@ body {
 .content {
     position: relative;
     z-index: 3;
-    color: var(--hover-color);
+    color: var(--third-color);
     text-align: center;
     padding: 20px;
     max-width: 800px;
@@ -241,18 +245,23 @@ body {
     font-size: 0.9em;
     margin-bottom: 10px;
 }
+.admission-btn{
+
+    padding: 10px 20px;
+    animation: slideIn 1s ease-out 0.5s both, float 3s ease-in-out 1s infinite;
+}
 .content .read-more-btn{
     display: inline-block;
-        padding: 10px 20px;
-        background-color: var(--hover-color);
-        color: var(--text-color);
-        text-decoration: none;
-        border-radius: 50px;
-        font-size: 1.1em;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-        animation: slideIn 1s ease-out 1s both;
-        animation: slideIn 1s ease-out 0.5s both, float 3s ease-in-out 1s infinite;
+    padding: 10px 20px;
+    background-color: var(--hover-color);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    animation: slideIn 1s ease-out 1s both;
+    animation: slideIn 1s ease-out 0.5s both, float 3s ease-in-out 1s infinite;
 }
 .about-section {
     background-color: #f8f9fa;
